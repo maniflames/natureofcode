@@ -32,6 +32,7 @@ void draw() {
     ball.velocity.z *= -1;
   }
   
+  
   ball.step();
   sceneRotation += 0.03;
 }

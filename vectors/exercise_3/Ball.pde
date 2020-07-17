@@ -15,8 +15,9 @@ class Ball {
   
   void render() {
     translate(this.location.x, this.location.y);
-    fill(255);
-    noStroke();
+    noFill();
+    stroke(255);
+    sphereDetail(8, 4); 
     sphere(this.radius);
   }
 } 
