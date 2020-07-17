@@ -34,5 +34,5 @@ void draw() {
   
   
   ball.step();
-  sceneRotation += 0.03;
+  //sceneRotation += 0.03;
 }
