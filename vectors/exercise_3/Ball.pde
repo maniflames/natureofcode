@@ -13,11 +13,24 @@ class Ball {
     location.add(velocity); 
   }
   
+  void renderVelocity() {
+    translate(this.location.x, this.location.y, this.location.z);
+    noFill();
+    stroke(255);
+    
+    PVector extendedVelocity = PVector.mult(this.velocity, 30);
+    line(0, 0, 0, extendedVelocity.x, extendedVelocity.y, extendedVelocity.z);
+    
+    translate(-this.location.x, -this.location.y, -this.location.z);
+  }
+  
   void render() {
-    translate(this.location.x, this.location.y);
+    translate(this.location.x, this.location.y, this.location.z);
     noFill();
     stroke(255);
     sphereDetail(8, 4); 
     sphere(this.radius);
+    
+    translate(-this.location.x, -this.location.y, -this.location.z);
   }
 } 

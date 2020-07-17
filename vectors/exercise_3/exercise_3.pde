@@ -1,6 +1,6 @@
 Ball ball;
 int boxWidth = 200;
-float sceneRotation = 3; 
+float sceneRotation = 3;
 
 void setup() {
   size(350, 350, P3D);
@@ -15,10 +15,11 @@ void draw() {
   
   noFill();
   stroke(255);
-  rotateY(-(sceneRotation / PI));
+  rotateY((sceneRotation / PI));
   box(boxWidth);
   
   ball.render();
+  ball.renderVelocity();
   
   if(ball.location.x - ball.radius <= -(boxWidth/2) || ball.location.x + ball.radius >= (boxWidth/2)) {
     ball.velocity.x *= -1;
@@ -34,5 +35,6 @@ void draw() {
   
   
   ball.step();
-  //sceneRotation += 0.03;
+  
+  sceneRotation += 0.03;
 }
