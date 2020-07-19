@@ -7,13 +7,15 @@ class Ball {
   Ball(int x, int y, int z, int r) {
     this.location = new PVector(x, y, z);
     this.velocity = new PVector(); 
-    this.acceleration = new PVector(random(-0.009, 0.009), random(-0.009, 0.009), random(-0.009, 0.009));
+    //this.acceleration = new PVector(random(-0.02, 0.02), random(-0.01, 0.01), random(-0.02, 0.02));
+    this.acceleration = new PVector(random(-1, 1), random(-0.5, 0.5), random(-1, 1));
+    this.velocity.add(acceleration);
     this.radius = r;
   }
   
   void step() {
-    this.velocity.add(this.acceleration); 
-    this.velocity.limit(4);    
+    //this.velocity.add(this.acceleration); 
+    //this.velocity.limit(4);    
     this.location.add(this.velocity); 
   }
   
