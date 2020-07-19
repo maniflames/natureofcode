@@ -23,18 +23,21 @@ void draw() {
   
   if(ball.location.x - ball.radius <= -(boxWidth/2) || ball.location.x + ball.radius >= (boxWidth/2)) {
     ball.velocity.x *= -1;
+    ball.acceleration.x *= -1;
   }
   
   if(ball.location.y - ball.radius <= -(boxWidth/2) || ball.location.y + ball.radius >= (boxWidth/2)) {
     ball.velocity.y *= -1;
+    ball.acceleration.y *= -1;
   }
   
   if(ball.location.z - ball.radius <= -(boxWidth/2) || ball.location.z + ball.radius >= (boxWidth/2)) {
     ball.velocity.z *= -1;
+    ball.acceleration.z *= -1;
   }
   
   
   ball.step();
   
-  sceneRotation += 0.03;
+  sceneRotation += 0.015;
 }
