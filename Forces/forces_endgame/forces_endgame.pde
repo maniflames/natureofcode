@@ -17,5 +17,5 @@ void draw() {
   background(35);
   fluid.update(); 
   gravitational.update();
-  friction.update(); 
+  friction.update();
 }

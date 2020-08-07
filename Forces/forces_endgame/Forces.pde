@@ -15,7 +15,7 @@ class Friction implements ForceCalculator {
     direction.normalize();
     direction.mult(-1); 
     
-    return direction.mult(0.04);
+    return direction.mult(0.1);
   }
 }
 
